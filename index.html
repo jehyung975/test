@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>김민준 | 포트폴리오</title>
+  <title>Gildong Hong | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 상단 내비게이션 -->
+  <!-- Navigation -->
   <header class="header">
     <nav class="navbar">
-      <a href="#home" class="logo">김민준<span class="logo-dot">.</span></a>
+      <a href="#home" class="logo">Gildong Hong<span class="logo-dot">.</span></a>
 
-      <!-- 모바일 햄버거 버튼 -->
-      <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기" aria-expanded="false">
+      <!-- Mobile hamburger button -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -33,68 +33,26 @@
   <main>
     <!-- Home -->
     <section id="home" class="section hero">
-      <div class="hero-decor hero-decor-1"></div>
-      <div class="hero-decor hero-decor-2"></div>
-      <div class="hero-decor hero-decor-3"></div>
+      <img class="feather-photo" src="feather.png" alt="Feather photo" aria-hidden="true" />
+
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="hero-greeting">안녕하세요 👋</p>
-          <h1 class="hero-title">저는 <span class="highlight">김민준</span>입니다.</h1>
+          <p class="hero-greeting">Hello 👋</p>
+          <h1 class="hero-title">I'm <span class="highlight">Gildong Hong</span>.</h1>
           <p class="hero-subtitle">
-            문제를 해결하고 가치를 만드는 <strong>컴퓨터공학 전공자</strong>입니다.<br />
-            프론트엔드 개발과 데이터 분석에 관심을 두고 성장하고 있습니다.
+            A <strong>Robotics Engineering</strong> student who solves problems and creates value.<br />
+            Passionate about frontend development and data analysis.
           </p>
           <div class="hero-tags">
-            <span class="tag">#프론트엔드</span>
-            <span class="tag">#문제해결</span>
-            <span class="tag">#협업</span>
-            <span class="tag">#성장마인드</span>
+            <span class="tag">#Frontend</span>
+            <span class="tag">#ProblemSolving</span>
+            <span class="tag">#Collaboration</span>
+            <span class="tag">#GrowthMindset</span>
           </div>
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
-            <a href="#contact" class="btn btn-outline">연락하기</a>
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
           </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <!-- 깃털 일러스트: 흰색 베이스 + 회색 그라데이션 -->
-          <svg class="feather" viewBox="0 0 280 540" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <linearGradient id="featherGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#555555" />
-                <stop offset="0.34" stop-color="#ffffff" />
-                <stop offset="1" stop-color="#ffffff" />
-              </linearGradient>
-            </defs>
-
-            <!-- 깃털 몸통(vane): 날카로운 형태, 흰색 + 끝(팁) 부분만 회색 그라데이션 -->
-            <path fill="url(#featherGrad)" d="
-              M 140 8
-              C 94 16 50 54 40 140
-              C 32 206 54 268 88 312
-              C 102 330 114 346 126 360
-              L 140 336
-              L 154 360
-              C 166 346 178 330 192 312
-              C 226 268 248 206 240 140
-              C 230 54 186 16 140 8
-              Z" />
-
-            <!-- 잔가지(barbs) -->
-            <g stroke="#c0c0c0" stroke-width="1.5" opacity="0.4" fill="none" stroke-linecap="round">
-              <path d="M 140 90 C 112 74 84 64 58 72" />
-              <path d="M 140 90 C 168 74 196 64 222 72" />
-              <path d="M 140 180 C 114 162 88 156 62 162" />
-              <path d="M 140 180 C 166 162 192 156 218 162" />
-              <path d="M 140 262 C 118 244 94 240 72 244" />
-              <path d="M 140 262 C 162 244 186 240 208 244" />
-            </g>
-
-            <!-- 중앙 축(rachis) -->
-            <path d="M 140 12 C 140 130 140 260 140 380" stroke="#8a8a8a" stroke-width="3" fill="none" stroke-linecap="round" />
-
-            <!-- 깃대(calamus) -->
-            <path d="M 140 380 C 139 412 138 442 140 460" stroke="#8a8a8a" stroke-width="4" fill="none" stroke-linecap="round" />
-          </svg>
         </div>
       </div>
     </section>
@@ -103,40 +61,40 @@
     <section id="about" class="section">
       <div class="container">
         <h2 class="section-title">About<span class="title-dot">.</span></h2>
-        <p class="section-desc">자기소개 및 학력</p>
+        <p class="section-desc">Introduction & Education</p>
 
         <div class="about-content">
           <div class="about-intro">
-            <h3>자기소개</h3>
+            <h3>Introduction</h3>
             <p>
-              안녕하세요. 새로운 기술을 배우고 사람들과 협업하며 더 나은 결과를 만들어내는
-              컴퓨터공학 전공 대학생 김민준입니다. 문제를 단순화하여 효율적으로 해결하는 것을 좋아하며,
-              사용자 경험을 고려한 개발에 관심이 많습니다.
+              Hello! I'm Gildong Hong, a Robotics Engineering student who loves learning new
+              technologies, collaborating with others, and creating better results. I enjoy
+              breaking complex problems into simple steps and solving them efficiently.
             </p>
             <p>
-              다양한 동아리 활동과 팀 프로젝트를 통해 협업과 커뮤니케이션 역량을 키워왔고,
-              꾸준한 학습으로 부족한 부분을 채워나가고 있습니다.
+              Through various club activities and team projects, I've grown my collaboration and
+              communication skills, and I keep filling gaps through continuous learning.
             </p>
           </div>
           <div class="about-edu">
-            <h3>학력</h3>
+            <h3>Education</h3>
             <ul class="edu-list">
               <li>
-                <span class="edu-period">2021.03 ~ 현재</span>
-                <span class="edu-name">한국대학교 컴퓨터공학과</span>
-                <span class="edu-detail">학점 3.9 / 4.5 · 전공학점 4.1 / 4.5</span>
+                <span class="edu-period">Mar 2021 — Present</span>
+                <span class="edu-name">Hankuk University, Robotics Engineering</span>
+                <span class="edu-detail">GPA 3.9 / 4.5 · Major GPA 4.1 / 4.5</span>
               </li>
               <li>
-                <span class="edu-period">2018.03 ~ 2021.02</span>
-                <span class="edu-name">서울고등학교</span>
-                <span class="edu-detail">자연계열 졸업</span>
+                <span class="edu-period">Mar 2018 — Feb 2021</span>
+                <span class="edu-name">Seoul High School</span>
+                <span class="edu-detail">Graduated (Science Track)</span>
               </li>
             </ul>
-            <h3>관심 분야</h3>
+            <h3>Interests</h3>
             <ul class="interest-list">
-              <li>웹 프론트엔드 개발</li>
-              <li>데이터 분석 및 시각화</li>
-              <li>UI/UX 디자인</li>
+              <li>Web Frontend Development</li>
+              <li>Data Analysis & Visualization</li>
+              <li>UI/UX Design</li>
             </ul>
           </div>
         </div>
@@ -148,11 +106,11 @@
     <section id="skills" class="section section-alt">
       <div class="container">
         <h2 class="section-title">Skills<span class="title-dot">.</span></h2>
-        <p class="section-desc">보유 기술 및 핵심 역량</p>
+        <p class="section-desc">Technical Skills & Core Competencies</p>
 
         <div class="skills-grid">
           <div class="skill-category">
-            <h3>💻 프로그래밍 언어</h3>
+            <h3>💻 Programming Languages</h3>
             <div class="skill-item">
               <span class="skill-name">JavaScript / TypeScript</span>
               <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
@@ -168,7 +126,7 @@
           </div>
 
           <div class="skill-category">
-            <h3>🛠 프레임워크 / 도구</h3>
+            <h3>🛠 Frameworks / Tools</h3>
             <div class="skill-item">
               <span class="skill-name">HTML / CSS</span>
               <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
@@ -184,12 +142,12 @@
           </div>
 
           <div class="skill-category">
-            <h3>✨ 핵심 역량 (Soft Skills)</h3>
+            <h3>✨ Core Competencies (Soft Skills)</h3>
             <ul class="soft-skills">
-              <li>문제 해결 능력 — 복잡한 문제를 단계적으로 분해해 해결</li>
-              <li>협업과 커뮤니케이션 — 팀 프로젝트 리드 경험</li>
-              <li>자기 주도 학습 — 새로운 기술 빠르게 습득</li>
-              <li>시간 관리 — 기한을 준수하는 습관</li>
+              <li>Problem Solving — breaking complex problems into clear steps</li>
+              <li>Collaboration & Communication — team project leadership</li>
+              <li>Self-directed Learning — quickly mastering new technologies</li>
+              <li>Time Management — consistently meeting deadlines</li>
             </ul>
           </div>
         </div>
@@ -201,51 +159,51 @@
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">Projects<span class="title-dot">.</span></h2>
-        <p class="section-desc">프로젝트 수행 경험</p>
+        <p class="section-desc">Project Experience</p>
 
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-thumb">📊</div>
             <div class="project-body">
-              <h3>캠퍼스 공지 알림 웹 서비스</h3>
+              <h3>Campus Notice Alert Web Service</h3>
               <p>
-                교내 공지사항을 한 곳에서 모아보고 키워드 알림을 보내는 웹 서비스입니다.
-                프론트엔드와 UI 설계를 담당했습니다.
+                A web service that gathers campus announcements in one place and sends
+                keyword-based alerts. I was responsible for the frontend and UI design.
               </p>
               <div class="project-tech">
                 <span>JavaScript</span><span>HTML/CSS</span><span>Git</span>
               </div>
-              <a href="#" class="project-link">GitHub 저장소 →</a>
+              <a href="#" class="project-link">GitHub Repository →</a>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-thumb">📈</div>
             <div class="project-body">
-              <h3>공공데이터 분석 대시보드</h3>
+              <h3>Open Data Analysis Dashboard</h3>
               <p>
-                공공데이터를 활용해 통계를 시각화하는 대시보드 프로젝트입니다.
-                데이터 전처리와 차트 구현을 담당했습니다.
+                A dashboard project that visualizes statistics using open data.
+                I handled data preprocessing and chart implementation.
               </p>
               <div class="project-tech">
                 <span>Python</span><span>Pandas</span><span>Chart.js</span>
               </div>
-              <a href="#" class="project-link">GitHub 저장소 →</a>
+              <a href="#" class="project-link">GitHub Repository →</a>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-thumb">📱</div>
             <div class="project-body">
-              <h3>스터디 매칭 모바일 웹</h3>
+              <h3>Study Matching Mobile Web</h3>
               <p>
-                같은 관심사를 가진 학생들을 매칭해주는 스터디 그룹 커뮤니티입니다.
-                반응형 UI 구현과 배포를 담당했습니다.
+                A study group community that matches students with similar interests.
+                I handled responsive UI implementation and deployment.
               </p>
               <div class="project-tech">
                 <span>React</span><span>CSS</span><span>GitHub Pages</span>
               </div>
-              <a href="#" class="project-link">GitHub 저장소 →</a>
+              <a href="#" class="project-link">GitHub Repository →</a>
             </div>
           </article>
         </div>
@@ -257,55 +215,55 @@
     <section id="experience" class="section section-alt">
       <div class="container">
         <h2 class="section-title">Experience<span class="title-dot">.</span></h2>
-        <p class="section-desc">대외활동, 자격증 및 수상 경력</p>
+        <p class="section-desc">Activities, Certifications & Awards</p>
 
         <div class="exp-columns">
           <div class="exp-block">
-            <h3>🏃 대외활동</h3>
+            <h3>🏃 Activities</h3>
             <ul class="exp-list">
               <li>
                 <span class="exp-date">2024.07 ~ 2024.12</span>
-                <span class="exp-name">코딩 동아리 'CodeUp' 부회장</span>
+                <span class="exp-name">Vice President of CodeUp Coding Club</span>
               </li>
               <li>
                 <span class="exp-date">2024.03 ~ 2024.06</span>
-                <span class="exp-name">교내 해커톤 참가 (팀 프로젝트 리드)</span>
+                <span class="exp-name">Campus Hackathon (Team Project Lead)</span>
               </li>
               <li>
                 <span class="exp-date">2023.09 ~ 2023.12</span>
-                <span class="exp-name">IT 봉사 동아리 멘토 활동</span>
+                <span class="exp-name">Mentor at IT Volunteer Club</span>
               </li>
             </ul>
           </div>
 
           <div class="exp-block">
-            <h3>📜 자격증</h3>
+            <h3>📜 Certifications</h3>
             <ul class="exp-list">
               <li>
                 <span class="exp-date">2024.08</span>
-                <span class="exp-name">정보처리기사 (한국산업인력공단)</span>
+                <span class="exp-name">Engineer Information Processing (HRD Korea)</span>
               </li>
               <li>
                 <span class="exp-date">2023.11</span>
-                <span class="exp-name">SQL 개발자 (SQLD)</span>
+                <span class="exp-name">SQL Developer (SQLD)</span>
               </li>
               <li>
                 <span class="exp-date">2023.05</span>
-                <span class="exp-name">컴퓨터활용능력 2급</span>
+                <span class="exp-name">Computer Proficiency Level 2</span>
               </li>
             </ul>
           </div>
 
           <div class="exp-block">
-            <h3>🏆 수상 경력</h3>
+            <h3>🏆 Awards</h3>
             <ul class="exp-list">
               <li>
                 <span class="exp-date">2024.06</span>
-                <span class="exp-name">교내 해커톤 우수상</span>
+                <span class="exp-name">Campus Hackathon Excellence Award</span>
               </li>
               <li>
                 <span class="exp-date">2023.12</span>
-                <span class="exp-name">캡스톤 경진대회 장려상</span>
+                <span class="exp-name">Capstone Competition Encouragement Award</span>
               </li>
             </ul>
           </div>
@@ -317,12 +275,12 @@
     <section id="contact" class="section">
       <div class="container">
         <h2 class="section-title">Contact<span class="title-dot">.</span></h2>
-        <p class="section-desc">이메일 및 GitHub 링크</p>
+        <p class="section-desc">Email & GitHub</p>
 
         <div class="contact-cards">
           <a href="mailto:minjun@example.com" class="contact-card">
             <span class="contact-icon">✉️</span>
-            <span class="contact-label">이메일</span>
+            <span class="contact-label">Email</span>
             <span class="contact-value">minjun@example.com</span>
           </a>
           <a href="https://github.com/" target="_blank" rel="noopener" class="contact-card">
@@ -335,12 +293,27 @@
     </section>
   </main>
 
-  <!-- 푸터 -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 김민준. All rights reserved.</p>
+      <p>© 2026 Gildong Hong. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Scroll-revealed paper overlay -->
+  <div class="paper-overlay" id="paperOverlay" aria-hidden="true">
+    <div class="paper-inner">
+      <div class="paper-head">
+        <span class="paper-title">Continue the story</span>
+        <button class="paper-close" id="paperClose" aria-label="Close">✕</button>
+      </div>
+      <p class="paper-text">
+        I turn ideas into real products — from planning and design all the way to
+        development. Keep scrolling to explore my skills, projects, and experience.
+      </p>
+      <a href="#about" class="btn btn-primary paper-cta">Learn more about me</a>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

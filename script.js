@@ -1,8 +1,8 @@
 // ============================================
-// 포트폴리오 웹사이트 스크립트
-// - 모바일 햄버거 메뉴 토글
-// - 내비게이션 링크 클릭 시 부드러운 스크롤
-// - 스크롤 위치에 따른 활성 메뉴 하이라이트
+// Portfolio website script
+// - Mobile hamburger menu toggle
+// - Smooth scroll on navigation link click
+// - Active menu highlight on scroll
 // ============================================
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -10,39 +10,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.getElementById("navMenu");
   const navLinks = document.querySelectorAll(".nav-link");
 
-  // 1. 모바일 햄버거 메뉴 토글
+  // 1. Mobile hamburger menu toggle
   menuToggle.addEventListener("click", function () {
     const isOpen = navMenu.classList.toggle("open");
     menuToggle.classList.toggle("open", isOpen);
     menuToggle.setAttribute("aria-expanded", isOpen);
-    menuToggle.setAttribute("aria-label", isOpen ? "메뉴 닫기" : "메뉴 열기");
+    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 
-  // 2. 내비게이션 링크 클릭 시 부드러운 스크롤 이동
+  // 2. Smooth scroll on navigation link click
   navLinks.forEach(function (link) {
     link.addEventListener("click", function (event) {
-      const targetId = link.getAttribute("href"); // 예: "#about"
+      const targetId = link.getAttribute("href"); // e.g. "#about"
       const targetSection = document.querySelector(targetId);
 
       if (targetSection) {
         event.preventDefault();
 
-        // 부드러운 스크롤
+        // Smooth scroll
         targetSection.scrollIntoView({ behavior: "smooth" });
 
-        // 모바일 메뉴 닫기
+        // Close mobile menu
         navMenu.classList.remove("open");
         menuToggle.classList.remove("open");
         menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "메뉴 열기");
+        menuToggle.setAttribute("aria-label", "Open menu");
 
-        // 활성 링크 즉시 갱신
+        // Update active link
         setActiveLink(targetId);
       }
     });
   });
 
-  // 3. 스크롤 위치에 따른 활성 메뉴 하이라이트
+  // 3. Active menu highlight on scroll
   function setActiveLink(currentId) {
     navLinks.forEach(function (link) {
       if (link.getAttribute("href") === currentId) {
@@ -53,11 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 현재 화면에 보이는 섹션을 감지하여 활성 링크 갱신
+  // Detect the visible section and update the active link
   const sections = document.querySelectorAll("section[id]");
 
   function updateActiveOnScroll() {
-    const scrollPosition = window.scrollY + 100; // 헤더 높이 보정
+    const scrollPosition = window.scrollY + 100; // Offset for header height
 
     let currentId = "";
     sections.forEach(function (section) {
@@ -73,6 +73,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", updateActiveOnScroll);
 
-  // 페이지 로드 시 최초 1회 실행
+  // Run once on page load
   updateActiveOnScroll();
+});
+
+// ============================================
+// Scroll-revealed paper overlay
+// ============================================
+document.addEventListener("DOMContentLoaded", function () {
+  const paperOverlay = document.getElementById("paperOverlay");
+  const paperClose = document.getElementById("paperClose");
+  const revealY = 160;
+  let dismissed = false;
+
+  function updatePaper() {
+    if (dismissed) return;
+    const shouldShow = window.scrollY > revealY;
+    paperOverlay.classList.toggle("show", shouldShow);
+    paperOverlay.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+  }
+
+  paperClose.addEventListener("click", function () {
+    dismissed = true;
+    paperOverlay.classList.remove("show");
+    paperOverlay.setAttribute("aria-hidden", "true");
+  });
+
+  window.addEventListener("scroll", updatePaper, { passive: true });
+  updatePaper();
 });
